@@ -46,7 +46,7 @@ public class ParkingController {
         return parkingService.getAllParkedCars();
     }
 
-    @GetMapping("/create/parking/spots/{numberOfSpots}")
+    @PostMapping("/create/parking/spots/{numberOfSpots}")
     public void createParkingSpots(@PathVariable("numberOfSpots") int numberOfSpots){
         parkingService.initializeParkingSpots(numberOfSpots);
     }
